@@ -64,7 +64,6 @@
     <Compile Include="Data\DataExtensions.cs" />
     <Compile Include="Data\DataSource.cs" />
     <Compile Include="Data\ObjectCloneExtension.cs" />
-    <Compile Include="Data\Querier.cs" />
     <Compile Include="Data\SqlMapper.cs" />
     <Compile Include="Data\SqlTableCreator.cs" />
     <Compile Include="Data\StringCompressor.cs" />
