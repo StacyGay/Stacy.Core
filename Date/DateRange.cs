@@ -8,21 +8,9 @@ namespace Stacy.Core.Date
 	{
 		public DateTime StartDate { get; set; }
 		public DateTime EndDate { get; set; }
-		public int NumberOfNights
-		{
-			get
-			{
-				return (EndDate.Date - StartDate.Date).Days;
-			}
-		}
+		public int NumberOfNights { get { return (EndDate.Date - StartDate.Date).Days; } }
 
-		public TimeSpan DateSpan
-		{
-			get
-			{
-				return EndDate - StartDate;
-			}
-		}
+		public TimeSpan DateSpan { get { return EndDate - StartDate; } }
 
 		public List<DateTime> DateList
 		{
@@ -45,6 +33,7 @@ namespace Stacy.Core.Date
 		}
 
 		public DateRange() : this(DateTime.Now, DateTime.Now) { }
+		public DateRange(DateTime startDate, int days) : this(startDate, startDate.AddDays(days)) { }
 
 		public DateRange(DateTime startDate, DateTime endDate)
 		{
